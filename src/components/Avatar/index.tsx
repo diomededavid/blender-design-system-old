@@ -1,9 +1,28 @@
-const Avatar = () => (
+interface AvatarProps {
+    /**
+     * Sets avatar size
+     */
+    size?: 'w-8' | 'w-12' | 'w-16' | 'w-24';
+
+    /**
+     * Avatar image url
+     */
+    imgUrl: string;
+
+    /**
+     * Avatar alt image description
+     */
+    altDesc: string;
+}
+export const Avatar = ({imgUrl = 'https://robohash.org/bob', size = 'w-16', altDesc}:AvatarProps) => {
+    return(
     <div className="avatar">
-        <div className="w-24 rounded-full">
-            <img src="https://api.lorem.space/image/face?hash=28212}" alt="avatar"/>
+        <div className={`${size} rounded-full`}>
+            <img src={imgUrl} alt={altDesc} />
         </div>
     </div>
-);
+)
+};
+
 
 export default Avatar;
