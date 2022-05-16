@@ -2,7 +2,7 @@ interface AvatarProps {
     /**
      * Sets avatar size
      */
-    size?: 'w-8' | 'w-12' | 'w-16' | 'w-24';
+    size: 'w-8' | 'w-12' | 'w-16' | 'w-24';
 
     /**
      * Avatar image url
@@ -14,7 +14,7 @@ interface AvatarProps {
      */
     altDesc: string;
 }
-export const Avatar = ({imgUrl = 'https://robohash.org/bob', size = 'w-16', altDesc}:AvatarProps) => {
+export const Avatar = ({imgUrl, size, altDesc}:AvatarProps) => {
     return(
     <div className="avatar">
         <div className={`${size} rounded-full`}>
