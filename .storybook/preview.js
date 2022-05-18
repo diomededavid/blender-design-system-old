@@ -10,7 +10,7 @@ export const parameters = {
     default: 'light',
     values: [
       { name: 'light', value: '#fff' },
-      { name: 'dark', value: '#3b5998' },
+      { name: 'dark', value: '#2A303C' },
     ],
   },
   previewTabs: {
