@@ -8,7 +8,7 @@ export default {
   component: Button,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
-    backgroundColor: {control: "color"},
+    color: {control: "radio"},
   },
 } as ComponentMeta<typeof Button>;
 
@@ -18,24 +18,30 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 export const Large = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Large.args = {
-  size: "btn-lg",
   label: "Button",
+  color: "btn-primary",
+  size: "btn-lg",
+  isOutline: true,
+  isWide: true,
 };
 
 export const Normal = Template.bind({});
 Normal.args = {
-  size: "btn",
   label: "Button",
+  color: "btn-secondary",
+  size: "btn",
 };
 
 export const Small = Template.bind({});
 Small.args = {
-  size: "btn-sm",
   label: "Button",
+  color: "btn-accent",
+  size: "btn-sm",
 };
 
 export const Tiny = Template.bind({});
 Tiny.args = {
-  size: "btn-xs",
   label: "Button",
+  color: "btn-ghost",
+  size: "btn-xs",
 };

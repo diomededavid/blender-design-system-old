@@ -2,13 +2,9 @@ import React from "react";
 
 interface BadgeProps {
   /**
-   * Is this the principal call to action on the page?
-   */
-  // primary?: boolean;
-  /**
    * What background color to use
    */
-  backgroundColor?: string;
+  color?: "badge-primary" | "badge-secondary" | "badge-accent" | "badge-ghost";
   /**
    * How large should the button be?
    */
@@ -31,14 +27,9 @@ interface BadgeProps {
 /**
  * Primary UI component for user interaction
  */
-export const Badge = ({size, backgroundColor, label, ...props}: BadgeProps) => {
+export const Badge = ({size, color, label, ...props}: BadgeProps) => {
   return (
-    <button
-      type="button"
-      className={`${size} badge `}
-      style={{backgroundColor}}
-      {...props}
-    >
+    <button type="button" className={`badge ${color} ${size}`} {...props}>
       {label}
     </button>
   );

@@ -2,21 +2,27 @@ import React from "react";
 
 interface ButtonProps {
   /**
-   * Is this the principal call to action on the page?
-   */
-  // primary?: boolean;
-  /**
    * What background color to use
    */
-  backgroundColor?: string;
+  color?: "btn-primary" | "btn-secondary" | "btn-accent" | "btn-ghost";
   /**
    * How large should the button be?
    */
   size?: "btn-xs" | "btn-sm" | "btn" | "btn-lg";
 
   /**
+   * Outline button
+   */
+  isOutline?: boolean;
+
+  /**
+   * Wide button
+   */
+  isWide?: boolean;
+  /**
    * Button contents
    */
+
   label: string;
   /**
    * Optional click handler
@@ -33,15 +39,18 @@ interface ButtonProps {
  */
 export const Button = ({
   size,
-  backgroundColor,
+  color,
   label,
+  isOutline,
+  isWide,
   ...props
 }: ButtonProps) => {
   return (
     <button
       type="button"
-      className={`${size} btn `}
-      style={{backgroundColor}}
+      className={`btn ${isOutline && "btn-outline"} ${color} ${size} ${
+        isWide && "btn-wide"
+      }`}
       {...props}
     >
       {label}

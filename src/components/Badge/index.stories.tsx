@@ -8,7 +8,7 @@ export default {
   component: Badge,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
-    backgroundColor: {control: "color"},
+    color: {control: "radio"},
   },
 } as ComponentMeta<typeof Badge>;
 
@@ -18,24 +18,28 @@ const Template: ComponentStory<typeof Badge> = (args) => <Badge {...args} />;
 export const Large = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Large.args = {
-  size: "badge-lg",
   label: "Badge",
+  color: "badge-primary",
+  size: "badge-lg",
 };
 
 export const Normal = Template.bind({});
 Normal.args = {
-  size: "badge-md",
   label: "Badge",
+  color: "badge-secondary",
+  size: "badge-md",
 };
 
 export const Small = Template.bind({});
 Small.args = {
-  size: "badge-sm",
   label: "Badge",
+  color: "badge-accent",
+  size: "badge-sm",
 };
 
 export const Tiny = Template.bind({});
 Tiny.args = {
-  size: "badge-xs",
   label: "Badge",
+  color: "badge-ghost",
+  size: "badge-xs",
 };
