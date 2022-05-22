@@ -1,12 +1,14 @@
 import Avatar from "./components/Avatar";
-import Footer from "./components/Footer";
 import "./App.css";
+import AvatarGroup from "./components/AvatarGroup";
 
 function App() {
   return (
     <div className="App">
-      <Avatar imgUrl="https://robohash.org/bob" size="w-24" altDesc="robot" />
-      <Footer description="This is a test by Sean" />
+      <AvatarGroup>
+        <Avatar imgUrl="https://robohash.org/bob" size="w-12" altDesc="robot" />
+        <Avatar imgUrl="https://robohash.org/bob" size="w-12" altDesc="robot" />
+      </AvatarGroup>
     </div>
   );
 }
