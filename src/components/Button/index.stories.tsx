@@ -22,7 +22,6 @@ Large.args = {
   color: "btn-primary",
   size: "btn-lg",
   isOutline: true,
-  isWide: true,
 };
 
 export const Normal = Template.bind({});
@@ -44,4 +43,11 @@ Tiny.args = {
   label: "Button",
   color: "btn-ghost",
   size: "btn-xs",
+};
+
+export const Wide = Template.bind({});
+Wide.args = {
+  label: "Button",
+  color: "btn-primary",
+  isWide: true
 };
