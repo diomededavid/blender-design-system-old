@@ -7,7 +7,8 @@ export default {
   title: "Atoms/Card",
   component: Card,
   argTypes: {
-    title: {control: "string"},
+    title: {control: "text"},
+    description: {control: "text"},
   },
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
 } as ComponentMeta<typeof Card>;
@@ -16,8 +17,8 @@ export default {
 const Template: ComponentStory<typeof Card> = (args) => <Card {...args} />;
 
 export const CardDefault = () => (
-  <Card title="title" description="description">
-    <Button label="label" />
+  <Card title="title">
+    <Button label="label" color="btn-primary"/>
   </Card>
 );
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
