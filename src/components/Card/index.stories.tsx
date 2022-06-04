@@ -10,10 +10,13 @@ export default {
 
 const Template: ComponentStory<typeof Card> = (args) => <Card {...args} />;
 
-export const CardDefault = () => <Card />;
+export const Default = () => <Card />;
 
 export const CardActions = () => (
   <Card>
+      <h2>Heading</h2>
+      <h2 className="card-title">Card title!</h2>
+      <p>If a dog chews shoes whose shoes does he choose?</p>
     <Button label="label" color="btn-primary" />
   </Card>
 );
