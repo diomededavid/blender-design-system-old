@@ -18,7 +18,7 @@ const Template: ComponentStory<typeof Card> = (args) => <Card {...args} />;
 
 export const CardDefault = () => (
   <Card title="title">
-    <Button label="label" color="btn-primary"/>
+    <Button label="label" color="btn-primary" />
   </Card>
 );
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
